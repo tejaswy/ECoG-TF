@@ -48,7 +48,7 @@ end
 
 
 if strcmp(method,'hilbert')
-    estPowers   = abs(hilbert(filtSignal));
+    estPowers   = (abs(hilbert(filtSignal')))';
 elseif strcmp(method,'squared')
     estPowers = (filtSignal).^2;
 else
